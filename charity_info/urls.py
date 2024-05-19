@@ -12,4 +12,6 @@ urlpatterns = [
     path('post_transactions', views.post_transactions),
     path('get_transactions', views.get_transactions),
     path('get_all_charities', views.get_all_charities),
+    path('get_char_metadata', views.get_char_metadata),
+    path('pull_cause', views.pull_cause),
  ]

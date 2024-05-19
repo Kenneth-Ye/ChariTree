@@ -12,15 +12,15 @@ POST http://172.20.10.13:8000/custom_auth/signup
 Content-Type: application/json
 
 {
-    "username": "Red_Cross",
-    "password": "Red Cross",
+    "username": "kenneth",
+    "password": "Doctors_Without_Borders",
     "email": "john@gmail.com",
     "is_admin": false,
-    "is_charity": true,
-    "wallet_addr": "0x123",
-    "text_desc": "The Red Cross is a renowned humanitarian organization dedicated to providing emergency assistance, disaster relief, and education in regions affected by crises.",
-    "subtitle": "Medical Emergencies"
-
+    "is_charity": false,
+    "wallet_addr": "0x123sssqdsjsjwiugedo",
+    "text_desc": "",
+    "subtitle": "",
+    "img_link": ""
 }
 
 ###
@@ -30,12 +30,9 @@ Content-Type: application/json
 Authorization: Token af086b07fcaddeff6fda17b41c0f1f3caec189d7
 
 ###
-GET http://172.20.10.13:8000/charity_info/get_causes
+GET http://172.20.10.2:8000/charity_info/get_causes?charity_name=GoFundMe
 Content-Type: application/json
 
-{
-    "charity_name": "GoFundMe"
-}
 
 ###
 GET http://172.20.10.13:8000/charity_info/get_transactions
@@ -46,40 +43,33 @@ Content-Type: application/json
 }
 
 ###
-POST http://172.20.10.13:8000/charity_info/post_transactions
+POST http://172.20.10.2:8000/charity_info/post_transactions
 Content-Type: application/json
 
 {
     "username": "katherine",
-    "charity_name": "GaysForGaza",
-    "amount": 103330.1
+    "charity_name": "Red_Cross",
+    "amount": 1030.1
 }
 ###
-GET http://172.20.10.13:8000/charity_info/get_charity_total
+GET http://172.20.10.2:8000/charity_info/get_charity_total?charity_name=Salvation_Army
 Content-Type: application/json
 
-{
-    "charity_name": "GaysForGaza"
-}
 
 ###
-GET http://172.20.10.13:8000/charity_info/get_charity_transactions
+GET http://172.20.10.2:8000/charity_info/get_charity_transactions?charity_name=GoFundMe
 Content-Type: application/json
 
-{
-    "charity_name": "GoFundMe"
-}
-
 ###
-POST http://172.20.10.13:8000/charity_info/add_cause
+POST http://172.20.10.2:8000/charity_info/add_cause
 Content-Type: application/json
 
 {
     "is_approved": true,
-    "cause_name": "Chelsea's chicken's surgery",
-    "charity_name": "GoFundMe",
-    "wallet_addr": "0x1ibpu3ewwrci3231pu23ee233",
-    "cause_desc": "We are raising money to keep Chelsea's chicken alive"
+    "cause_name": "Vaccines for Guatemala",
+    "charity_name": "Plan_International",
+    "wallet_addr": "0x1ibpsau23ee233",
+    "cause_desc": "Raising money to provide vaccines in guatemela"
 }
 
 ###
@@ -98,3 +88,14 @@ Content-Type: application/json
 
 {
 }
+
+###
+GET http://172.20.10.2:8000/charity_info/get_char_metadata
+Content-Type: application/json
+
+{
+    "charity_name": "GoFundMe"
+}
+###
+GET http://172.20.10.2:8000/charity_info/pull_cause?cause_id=6
+Content-Type: application/json

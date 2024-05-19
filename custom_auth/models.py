@@ -10,6 +10,7 @@ class Account(AbstractUser):
     #new params
     text_desc = models.TextField(max_length=500, blank=True, null=True)
     subtitle = models.CharField(max_length=100, blank=True, null=True)
+    img_link = models.CharField(max_length=1000, blank=True, null=True)
     
     def __str__(self):
         return self.username
