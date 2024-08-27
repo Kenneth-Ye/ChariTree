@@ -1,4 +1,4 @@
-# Charitree
+# ChariTree
 
 ## A donation app that uses blockchain to enforce transparency | HawkHacks 2024
 
